@@ -1,0 +1,373 @@
+,section_num,Vid idx,title,duration,done
+0,1,-1,Section 1: Introduction,0 days 00:00:00,True
+1,1,1,1. PyTorch for Deep Learning,0 days 00:04:00,True
+2,1,2,2. Course Welcome and What Is Deep Learning,0 days 00:06:00,True
+3,1,3,3. Join Our Online Classroom!,0 days 00:04:00,True
+4,1,4,4. Exercise: Meet Your Classmates + Instructor,0 days 00:02:00,True
+5,1,5,5. Free Course Book + Code Resources + Asking Questions + Getting Help,0 days 00:01:00,True
+6,1,6,6. ZTM Resources,0 days 00:04:00,True
+7,1,7,7. Machine Learning + Python Monthly Newsletters,0 days 00:01:00,True
+8,2,-1,Section 2: PyTorch Fundamentals,0 days 00:00:00,True
+9,2,8,8. Why Use Machine Learning or Deep Learning,0 days 00:04:00,True
+10,2,9,9. The Number 1 Rule of Machine Learning and What Is Deep Learning Good For,0 days 00:06:00,True
+11,2,10,10. Machine Learning vs. Deep Learning,0 days 00:06:00,True
+12,2,11,11. Anatomy of Neural Networks,0 days 00:09:00,True
+13,2,12,12. Different Types of Learning Paradigms,0 days 00:05:00,True
+14,2,13,13. What Can Deep Learning Be Used For,0 days 00:06:00,True
+15,2,14,14. What Is and Why PyTorch,0 days 00:10:00,True
+16,2,15,15. What Are Tensors,0 days 00:04:00,True
+17,2,16,16. What We Are Going To Cover With PyTorch,0 days 00:06:00,True
+18,2,17,17. How To and How Not To Approach This Course,0 days 00:05:00,True
+19,2,18,18. Important Resources For This Course,0 days 00:05:00,True
+20,2,19,19. Getting Setup to Write PyTorch Code,0 days 00:08:00,True
+21,2,20,20. Introduction to PyTorch Tensors,0 days 00:13:00,True
+22,2,21,21. Creating Random Tensors in PyTorch,0 days 00:10:00,True
+23,2,22,22. Creating Tensors With  Zeros and Ones in PyTorch,0 days 00:03:00,True
+24,2,23,23. Creating a Tensor Range and Tensors Like Other Tensors,0 days 00:05:00,True
+25,2,24,24. Dealing With Tensor Data Types,0 days 00:09:00,True
+26,2,25,25. Getting Tensor Attributes,0 days 00:08:00,True
+27,2,26,26. Manipulating Tensors (Tensor Operations),0 days 00:06:00,True
+28,2,27,27. Matrix Multiplication (Part 1),0 days 00:10:00,True
+29,2,28,28. Matrix Multiplication (Part 2): The Two Main Rules of Matrix Multiplication,0 days 00:08:00,True
+30,2,29,29. Matrix Multiplication (Part 3): Dealing With Tensor Shape Errors,0 days 00:13:00,True
+31,2,30,30. Finding the Min Max Mean and  Sum of Tensors (Tensor Aggregation),0 days 00:06:00,True
+32,2,31,31. Finding The Positional Min and Max of Tensors,0 days 00:03:00,True
+33,2,32,"32. Reshaping, Viewing and Stacking Tensors",0 days 00:14:00,True
+34,2,33,"33. Squeezing, Unsqueezing and Permuting Tensors",0 days 00:12:00,True
+35,2,34,34. Selecting Data From Tensors (Indexing),0 days 00:10:00,True
+36,2,35,35. PyTorch Tensors and NumPy,0 days 00:09:00,True
+37,2,36,36. PyTorch Reproducibility (Taking the Random Out of Random),0 days 00:11:00,True
+38,2,37,37. Different Ways of Accessing a GPU in PyTorch,0 days 00:12:00,True
+39,2,38,38. Setting up Device-Agnostic Code and Putting Tensors On and Off the GPU,0 days 00:08:00,True
+40,2,39,39. PyTorch Fundamentals: Exercises and Extra-Curriculum,0 days 00:05:00,True
+41,3,-1,Section 3: PyTorch Workflow,0 days 00:00:00,True
+42,3,40,40. Introduction and Where You Can Get Help,0 days 00:03:00,True
+43,3,41,41. Getting Setup and What We Are Covering,0 days 00:07:00,True
+44,3,42,42. Creating a Simple Dataset Using the Linear Regression Formula,0 days 00:10:00,True
+45,3,43,43. Splitting Our Data Into Training and Test Sets,0 days 00:08:00,True
+46,3,44,44. Building a function to Visualize Our Data,0 days 00:08:00,True
+47,3,45,45. Creating Our First PyTorch Model for Linear Regression,0 days 00:14:00,True
+48,3,46,46. Breaking Down What's Happening in Our PyTorch Linear regression Model,0 days 00:06:00,True
+49,3,47,47. Discussing Some of the Most Important PyTorch Model Building Classes,0 days 00:06:00,True
+50,3,48,48. Checking Out the Internals of Our PyTorch Model,0 days 00:10:00,True
+51,3,49,49. Making Predictions With Our Random Model Using Inference Mode,0 days 00:11:00,True
+52,3,50,50. Training a Model Intuition (The Things We Need),0 days 00:08:00,True
+53,3,51,51. Setting Up an Optimizer and a Loss Function,0 days 00:13:00,True
+54,3,52,52. PyTorch Training Loop Steps and Intuition,0 days 00:14:00,True
+55,3,53,53. Writing Code for a PyTorch Training Loop,0 days 00:09:00,True
+56,3,54,54. Reviewing the Steps in a Training Loop Step by Step,0 days 00:15:00,True
+57,3,55,55. Running Our Training Loop Epoch by Epoch and Seeing What Happens,0 days 00:09:00,True
+58,3,56,56. Writing Testing Loop Code and Discussing What's Happening Step by Step,0 days 00:12:00,True
+59,3,57,57. Reviewing What Happens in a Testing Loop Step by Step,0 days 00:15:00,True
+60,3,58,58. Writing Code to Save a PyTorch Model,0 days 00:14:00,True
+61,3,59,59. Writing Code  to Load a PyTorch Model,0 days 00:09:00,True
+62,3,60,60. Setting Up to Practice Everything We Have Done Using Device Agnostic code,0 days 00:06:00,True
+63,3,61,61. Putting Everything Together (Part 1): Data,0 days 00:06:00,True
+64,3,62,62. Putting Everything Together (Part 2): Building a Model,0 days 00:10:00,True
+65,3,63,63. Putting Everything Together (Part 3):  Training a Model,0 days 00:13:00,True
+66,3,64,64. Putting Everything Together (Part 4): Making Predictions With a Trained Model,0 days 00:05:00,True
+67,3,65,65. Putting Everything Together (Part 5): Saving and Loading a Trained Model,0 days 00:09:00,True
+68,3,66,66. Exercise: Imposter Syndrome,0 days 00:03:00,True
+69,3,67,67. PyTorch Workflow: Exercises and Extra-Curriculum,0 days 00:04:00,True
+70,4,-1,Section 4: PyTorch Neural Network Classification,0 days 00:00:00,True
+71,4,68,68. Introduction to Machine Learning Classification With PyTorch,0 days 00:10:00,True
+72,4,69,69. Classification Problem Example: Input and Output Shapes,0 days 00:09:00,True
+73,4,70,70. Typical Architecture of a Classification Neural Network (Overview),0 days 00:07:00,True
+74,4,71,71. Making a Toy Classification Dataset,0 days 00:12:00,True
+75,4,72,72. Turning Our Data into Tensors and Making a Training and Test Split,0 days 00:12:00,True
+76,4,73,73. Laying Out Steps for Modelling and Setting Up Device-Agnostic Code,0 days 00:04:00,True
+77,4,74,74. Coding a Small Neural Network to Handle Our Classification Data,0 days 00:11:00,True
+78,4,75,75. Making Our Neural Network Visual,0 days 00:07:00,True
+79,4,76,76. Recreating and Exploring the Insides of Our Model Using nn.Sequential,0 days 00:13:00,True
+80,4,77,77. Loss Function Optimizer and Evaluation Function for Our Classification Network,0 days 00:15:00,True
+81,4,78,78. Going from Model Logits to Prediction Probabilities to Prediction Labels,0 days 00:16:00,True
+82,4,79,79. Coding a Training and Testing Optimization Loop for Our Classification Model,0 days 00:15:00,True
+83,4,80,80. Writing Code to Download a Helper Function to Visualize Our Models Predictions,0 days 00:14:00,True
+84,4,81,81. Discussing Options to Improve a Model,0 days 00:08:00,True
+85,4,82,82. Creating a New Model with More Layers and Hidden Units,0 days 00:09:00,True
+86,4,83,83. Writing Training and Testing Code to See if Our Upgraded Model Performs Better,0 days 00:13:00,True
+87,4,84,84. Creating a Straight Line Dataset to See if Our Model is Learning Anything,0 days 00:08:00,True
+88,4,85,85. Building and Training a Model to Fit on Straight Line Data,0 days 00:10:00,True
+89,4,86,86. Evaluating Our Models Predictions on Straight Line Data,0 days 00:05:00,True
+90,4,87,87. Introducing the Missing Piece for Our Classification Model Non-Linearity,0 days 00:10:00,True
+91,4,88,88. Building Our First Neural Network with Non-Linearity,0 days 00:10:00,True
+92,4,89,89. Writing Training and Testing Code for Our First Non-Linear Model,0 days 00:15:00,True
+93,4,90,90. Making Predictions with and Evaluating Our First Non-Linear Model,0 days 00:06:00,True
+94,4,91,91. Replicating Non-Linear Activation Functions with Pure PyTorch,0 days 00:10:00,True
+95,4,92,92. Putting It All Together (Part 1): Building a Multiclass Dataset,0 days 00:11:00,True
+96,4,93,93. Creating a Multi-Class Classification Model with PyTorch,0 days 00:12:00,True
+97,4,94,94. Setting Up a Loss Function and Optimizer for Our Multi-Class Model,0 days 00:07:00,True
+98,4,95,95. Logits to Prediction Probabilities to Prediction Labels with a Multi-Class Model,0 days 00:11:00,True
+99,4,96,96. Training a Multi-Class Classification Model and Troubleshooting Code on the Fly,0 days 00:16:00,True
+100,4,97,97. Making Predictions with and Evaluating Our Multi-Class Classification Model,0 days 00:08:00,True
+101,4,98,98. Discussing a Few More Classification Metrics,0 days 00:09:00,True
+102,4,99,99. PyTorch Classification: Exercises and Extra-Curriculum,0 days 00:03:00,True
+103,5,-1,Section 5: PyTorch Computer Vision,0 days 00:00:00,True
+104,5,100,100. What Is a Computer Vision Problem and What We Are Going to Cover,0 days 00:12:00,True
+105,5,101,101. Computer Vision Input and Output Shapes,0 days 00:10:00,True
+106,5,102,102. What Is a Convolutional Neural Network (CNN),0 days 00:05:00,True
+107,5,103,103. Discussing and Importing the Base Computer Vision Libraries in PyTorch,0 days 00:09:00,True
+108,5,104,104. Getting a Computer Vision Dataset and Checking Out Its- Input and Output Shapes,0 days 00:15:00,True
+109,5,105,105. Visualizing Random Samples of Data,0 days 00:10:00,True
+110,5,106,106. DataLoader Overview Understanding Mini-Batches,0 days 00:07:00,True
+111,5,107,107. Turning Our Datasets Into DataLoaders,0 days 00:12:00,True
+112,5,108,108. Model 0: Creating a Baseline Model with Two Linear Layers,0 days 00:15:00,True
+113,5,109,109. Creating a Loss Function: an Optimizer for Model 0,0 days 00:10:00,True
+114,5,110,110. Creating a Function to Time Our Modelling Code,0 days 00:06:00,True
+115,5,111,111. Writing Training and Testing Loops for Our Batched Data,0 days 00:21:00,True
+116,5,112,112. Writing an Evaluation Function to Get Our Models Results,0 days 00:13:00,True
+117,5,113,113. Setup Device-Agnostic Code for Running Experiments on the GPU,0 days 00:04:00,True
+118,5,114,114. Model 1: Creating a Model with Non-Linear Functions,0 days 00:09:00,True
+119,5,115,115. Mode 1: Creating a Loss Function and Optimizer,0 days 00:03:00,True
+120,5,116,116. Turing Our Training Loop into a Function,0 days 00:08:00,True
+121,5,117,117. Turing Our Testing Loop into a Function,0 days 00:07:00,True
+122,5,118,118. Training and Testing Model 1 with Our Training and Testing Functions,0 days 00:12:00,True
+123,5,119,119. Getting a Results Dictionary for Model 1,0 days 00:04:00,True
+124,5,120,120. Model 2: Convolutional Neural Networks High Level Overview,0 days 00:08:00,True
+125,5,121,121. Model 2: Coding Our First Convolutional Neural Network with PyTorch,0 days 00:20:00,True
+126,5,122,122. Model 2: Breaking Down Conv2D Step by Step,0 days 00:15:00,True
+127,5,123,123. Model 2: Breaking Down MaxPool2D Step by Step,0 days 00:16:00,True
+128,5,124,124. Mode 2:  Using a Trick to Find the Input and Output Shapes of Each of Our Layers,0 days 00:14:00,True
+129,5,125,125. Model 2: Setting Up a Loss Function and Optimizer,0 days 00:03:00,True
+130,5,126,126. Model 2: Training Our First CNN and Evaluating Its Results,0 days 00:08:00,True
+131,5,127,127. Comparing the Results of Our Modelling Experiments,0 days 00:07:00,True
+132,5,128,128. Making Predictions on Random Test Samples with the Best Trained Model,0 days 00:12:00,True
+133,5,129,129. Plotting Our Best Model Predictions on Random Test Samples and Evaluating Them,0 days 00:08:00,True
+134,5,130,130. Making Predictions and Importing Libraries to Plot a Confusion Matrix,0 days 00:15:00,True
+135,5,131,131. Evaluating Our Best Models Predictions with a Confusion Matrix,0 days 00:07:00,True
+136,5,132,132. Saving and Loading Our Best Performing Model,0 days 00:11:00,True
+137,5,133,133. Recapping What We Have Covered Plus Exercises and Extra-Curriculum,0 days 00:06:00,True
+138,6,-1,Section 6: PyTorch Custom Datasets,0 days 00:00:00,True
+139,6,134,134. What Is a Custom Dataset and What We Are Going to Cover,0 days 00:10:00,True
+140,6,135,135. Importing PyTorch and Setting Up Device Agnostic Code,0 days 00:06:00,True
+141,6,136,"136. Downloading a Custom Dataset of Pizza, Steak and Sushi Images",0 days 00:14:00,True
+142,6,137,137. Becoming One With the Data (Part 1): Exploring the Data Format,0 days 00:09:00,True
+143,6,138,138. Becoming One With the Data (Part 2): Visualizing a Random Image,0 days 00:12:00,True
+144,6,139,139. Becoming One With the Data (Part 3): Visualizing a Random Image with Matplotlib,0 days 00:05:00,True
+145,6,140,140. Transforming Data (Part 1): Turning Images Into Tensors,0 days 00:09:00,True
+146,6,141,141. Transforming Data (Part 2): Visualizing Transformed Images,0 days 00:12:00,True
+147,6,142,142. Loading All of Our Images and Turning Them Into Tensors With ImageFolder,0 days 00:09:00,True
+148,6,143,143. Visualizing a Loaded Image From the Train Dataset,0 days 00:07:00,True
+149,6,144,144. Turning Our Image Datasets into PyTorch Dataloaders,0 days 00:09:00,True
+150,6,145,145. Creating a Custom Dataset Class in PyTorch High  Level Overview,0 days 00:08:00,True
+151,6,146,146. Creating a Helper Function to Get Class Names From a Directory,0 days 00:09:00,True
+152,6,147,147. Writing a PyTorch Custom Dataset Class from Scratch to Load Our Images,0 days 00:18:00,True
+153,6,148,148. Compare Our Custom Dataset Class. to the Original Imagefolder Class,0 days 00:07:00,True
+154,6,149,149. Writing a Helper Function to Visualize Random Images from Our Custom Dataset,0 days 00:14:00,True
+155,6,150,150. Turning Our Custom Datasets Into DataLoaders,0 days 00:07:00,True
+156,6,151,151. Exploring State of the Art Data Augmentation With Torchvision Transforms,0 days 00:14:00,True
+157,6,152,152. Building a Baseline Model (Part 1): Loading and Transforming Data,0 days 00:08:00,True
+158,6,153,153. Building a Baseline Model (Part 2): Replicating Tiny VGG from Scratch,0 days 00:11:00,True
+159,6,154,154. Building a Baseline Model (Part 3):Doing a Forward Pass to Test Our Model Shapes,0 days 00:08:00,True
+160,6,155,155. Using the Torchinfo Package to Get a Summary of Our Model,0 days 00:07:00,True
+161,6,156,156. Creating Training and Testing loop Functions,0 days 00:13:00,True
+162,6,157,157. Creating a Train Function to Train and Evaluate Our Models,0 days 00:10:00,True
+163,6,158,158. Training and Evaluating Model 0 With Our Training Functions,0 days 00:10:00,True
+164,6,159,159. Plotting the Loss Curves of Model 0,0 days 00:09:00,True
+165,6,160,160. The Balance Between Overfitting and Underfitting and How to Deal With Each,0 days 00:14:00,True
+166,6,161,161. Creating Augmented Training Datasets and DataLoaders for Model 1,0 days 00:11:00,False
+167,6,162,162. Constructing and Training Model 1,0 days 00:07:00,False
+168,6,163,163. Plotting the Loss Curves of Model 1,0 days 00:03:00,False
+169,6,164,164. Plotting the Loss Curves of All of Our Models Against Each Other,0 days 00:11:00,False
+170,6,165,165. Predicting on Custom Data (Part 1): Downloading an Image,0 days 00:06:00,False
+171,6,166,166. Predicting on Custom Data (Part 2): Loading In a Custom Image With PyTorch,0 days 00:07:00,False
+172,6,167,167. Predicting on Custom Data (Part3):Getting Our Custom Image Into the Right Format,0 days 00:14:00,False
+173,6,168,168. Predicting on Custom Data (Part4):Turning Our Models Raw Outputs Into Prediction,0 days 00:04:00,False
+174,6,169,169. Predicting on Custom Data (Part 5): Putting It All Together,0 days 00:13:00,False
+175,6,170,170. Summary of What We Have Covered Plus Exercises and Extra-Curriculum,0 days 00:06:00,False
+176,7,-1,Section 7: PyTorch Going Modular,0 days 00:00:00,True
+177,7,171,171. What Is Going Modular and What We Are Going to Cover,0 days 00:12:00,False
+178,7,172,172. Going Modular Notebook (Part 1): Running It End to End,0 days 00:08:00,False
+179,7,173,173. Downloading a Dataset,0 days 00:05:00,False
+180,7,174,174. Writing the Outline for Our First Python Script to Setup the Data,0 days 00:14:00,False
+181,7,175,175. Creating a Python Script to Create Our PyTorch DataLoaders,0 days 00:11:00,False
+182,7,176,176. Turning Our Model Building Code into a Python Script,0 days 00:09:00,False
+183,7,177,177. Turning Our Model Training Code into a Python Script,0 days 00:06:00,False
+184,7,178,178. Turning Our Utility Function to Save a Model into a Python Script,0 days 00:06:00,False
+185,7,179,179. Creating a Training Script to Train Our Model in One Line of Code,0 days 00:16:00,False
+186,7,180,"180. Going Modular: Summary, Exercises and Extra-Curriculum",0 days 00:06:00,False
+187,8,-1,Section 8: PyTorch Transfer Learning,0 days 00:00:00,True
+188,8,181,181. Introduction: What is  Transfer Learning and Why Use It,0 days 00:10:00,False
+189,8,182,182. Where Can You Find Pretrained Models and What We Are Going to Cover,0 days 00:05:00,False
+190,8,183,183. Installing the Latest Versions of Torch and Torchvision,0 days 00:08:00,False
+191,8,184,184. Downloading Our Previously Written Code from Going Modular,0 days 00:07:00,False
+192,8,185,"185. Downloading Pizza, Steak, Sushi Image Data from Github",0 days 00:08:00,False
+193,8,186,186. Turning Our Data into DataLoaders with Manually Created Transforms,0 days 00:15:00,False
+194,8,187,187. Turning Our Data into DataLoaders with Automatic Created Transforms,0 days 00:13:00,False
+195,8,188,188. Which Pretrained Model Should You Use,0 days 00:12:00,False
+196,8,189,189. Setting Up a Pretrained Model with Torchvision,0 days 00:11:00,False
+197,8,190,190. Different Kinds of Transfer Learning,0 days 00:07:00,False
+198,8,191,191. Getting a Summary of the Different Layers of  Our Model,0 days 00:07:00,False
+199,8,192,192. Freezing the Base Layers of Our Model and Updating the Classifier Head,0 days 00:13:00,False
+200,8,193,193. Training Our First Transfer Learning Feature Extractor Model,0 days 00:08:00,False
+201,8,194,194. Plotting the Loss curves of Our Transfer Learning Model,0 days 00:06:00,False
+202,8,195,195. Outlining the Steps to Make Predictions on the Test Images,0 days 00:08:00,False
+203,8,196,196. Creating a Function Predict On and Plot Images,0 days 00:10:00,False
+204,8,197,197. Making and Plotting Predictions on Test Images,0 days 00:07:00,False
+205,8,198,198. Making a Prediction on a Custom Image,0 days 00:06:00,False
+206,8,199,"199. Main Takeaways, Exercises and Extra- Curriculum",0 days 00:03:00,False
+207,9,-1,Section 9: PyTorch Experiment Tracking,0 days 00:00:00,True
+208,9,200,200. What Is Experiment Tracking and Why Track Experiments,0 days 00:07:00,False
+209,9,201,201. Getting Setup by Importing Torch Libraries and Going Modular Code,0 days 00:08:00,False
+210,9,202,202. Creating a Function to Download Data,0 days 00:10:00,False
+211,9,203,203. Turning Our Data into DataLoaders Using Manual Transforms,0 days 00:09:00,False
+212,9,204,204. Turning Our Data into DataLoaders Using Automatic Transforms,0 days 00:08:00,False
+213,9,205,205. Preparing a Pretrained Model for Our Own Problem,0 days 00:10:00,False
+214,9,206,206. Setting Up a Way to Track a Single Model Experiment with TensorBoard,0 days 00:14:00,False
+215,9,207,207. Training a Single Model and Saving the Results to TensorBoard,0 days 00:05:00,False
+216,9,208,208. Exploring Our Single Models Results with TensorBoard,0 days 00:10:00,False
+217,9,209,209. Creating a Function to Create SummaryWriter Instances,0 days 00:11:00,False
+218,9,210,210. Adapting Our Train Function to Be Able to Track Multiple Experiments,0 days 00:05:00,False
+219,9,211,211. What Experiments Should You Try,0 days 00:06:00,False
+220,9,212,212. Discussing the Experiments We Are Going to Try,0 days 00:06:00,False
+221,9,213,213. Downloading Datasets for Our Modelling Experiments,0 days 00:07:00,False
+222,9,214,214. Turning Our Datasets into DataLoaders Ready for Experimentation,0 days 00:08:00,False
+223,9,215,215. Creating Functions to Prepare Our Feature Extractor Models,0 days 00:16:00,False
+224,9,216,216. Coding Out the Steps to Run a Series of Modelling Experiments,0 days 00:14:00,False
+225,9,217,217. Running Eight Different Modelling Experiments in 5 Minutes,0 days 00:04:00,False
+226,9,218,218. Viewing Our Modelling Experiments in TensorBoard,0 days 00:14:00,False
+227,9,219,219. Loading the Best Model and Making Predictions on Random Images from the Test Set,0 days 00:11:00,False
+228,9,220,220. Making a Prediction on Our Own Custom Image with the Best Model,0 days 00:04:00,False
+229,9,221,"221. Main Takeaways, Exercises and Extra- Curriculum",0 days 00:04:00,False
+230,10,-1,Section 10: PyTorch Paper Replicating,0 days 00:00:00,True
+231,10,222,222. What Is a Machine Learning Research Paper?,0 days 00:08:00,False
+232,10,223,223. Why Replicate a Machine Learning Research Paper?,0 days 00:03:00,False
+233,10,224,224. Where Can You Find Machine Learning Research Papers and Code?,0 days 00:08:00,False
+234,10,225,225. What We Are Going to Cover,0 days 00:08:00,False
+235,10,226,226. Getting Setup for Coding in Google Colab,0 days 00:08:00,False
+236,10,227,227. Downloading Data for Food Vision Mini,0 days 00:04:00,False
+237,10,228,228. Turning Our Food Vision Mini Images into PyTorch DataLoaders,0 days 00:10:00,False
+238,10,229,229. Visualizing a Single Image,0 days 00:04:00,False
+239,10,230,230. Replicating a Vision Transformer - High Level Overview,0 days 00:10:00,False
+240,10,231,231. Breaking Down Figure 1 of the ViT Paper,0 days 00:11:00,False
+241,10,232,232. Breaking Down the Four Equations Overview and a Trick for Reading Papers,0 days 00:11:00,False
+242,10,233,233. Breaking Down Equation 1,0 days 00:08:00,False
+243,10,234,234. Breaking Down Equation 2 and 3,0 days 00:10:00,False
+244,10,235,235. Breaking Down Equation 4,0 days 00:07:00,False
+245,10,236,236. Breaking Down Table 1,0 days 00:11:00,False
+246,10,237,237. Calculating the Input and Output Shape of the Embedding Layer by Hand,0 days 00:16:00,False
+247,10,238,238. Turning a Single Image into Patches (Part 1: Patching the Top Row),0 days 00:15:00,False
+248,10,239,239. Turning a Single Image into Patches (Part 2: Patching the Entire Image),0 days 00:13:00,False
+249,10,240,240. Creating Patch Embeddings with a Convolutional Layer,0 days 00:14:00,False
+250,10,241,241. Exploring the Outputs of Our Convolutional Patch Embedding Layer,0 days 00:13:00,False
+251,10,242,242. Flattening Our Convolutional Feature Maps into a Sequence of Patch Embeddings,0 days 00:10:00,False
+252,10,243,243. Visualizing a Single Sequence Vector of Patch Embeddings,0 days 00:05:00,False
+253,10,244,244. Creating the Patch Embedding Layer with PyTorch,0 days 00:17:00,False
+254,10,245,245. Creating the Class Token Embedding,0 days 00:13:00,False
+255,10,246,246. Creating the Class Token Embedding - Less Birds,0 days 00:13:00,False
+256,10,247,247. Creating the Position Embedding,0 days 00:11:00,False
+257,10,248,248. Equation 1: Putting it All Together,0 days 00:13:00,False
+258,10,249,249. Equation 2: Multihead Attention Overview,0 days 00:15:00,False
+259,10,250,250. Equation 2: Layernorm Overview,0 days 00:09:00,False
+260,10,251,251. Turning Equation 2 into Code,0 days 00:15:00,False
+261,10,252,252. Checking the Inputs and Outputs of Equation,0 days 00:06:00,False
+262,10,253,253. Equation 3: Replication Overview,0 days 00:09:00,False
+263,10,254,254. Turning Equation 3 into Code,0 days 00:11:00,False
+264,10,255,255. Transformer  Encoder Overview,0 days 00:09:00,False
+265,10,256,256. Combining equation 2 and 3 to Create the Transformer  Encoder,0 days 00:09:00,False
+266,10,257,257. Creating a Transformer Encoder Layer with In-Built PyTorch Layer,0 days 00:16:00,False
+267,10,258,258. Bringing Our Own Vision Transformer to Life  - Part 1: Gathering the Pieces,0 days 00:18:00,False
+268,10,259,259. Bringing Our Own Vision Transformer to Life  - Part 2: The Forward Method,0 days 00:11:00,False
+269,10,260,260. Getting a Visual Summary of Our Custom Vision Transformer,0 days 00:07:00,False
+270,10,261,261. Creating a Loss Function and Optimizer from the ViT Paper,0 days 00:11:00,False
+271,10,262,262. Training our Custom ViT on Food Vision Mini,0 days 00:04:00,False
+272,10,263,263. Discussing what Our Training Setup Is Missing,0 days 00:09:00,False
+273,10,264,264. Plotting a Loss Curve for Our ViT Model,0 days 00:06:00,False
+274,10,265,265. Getting a Pretrained Vision Transformer from Torchvision and Setting it Up,0 days 00:15:00,False
+275,10,266,266. Preparing Data to Be Used with a Pretrained ViT,0 days 00:06:00,False
+276,10,267,267. Training a Pretrained ViT Feature Extractor Model for Food Vision Mini,0 days 00:07:00,False
+277,10,268,268. Saving Our Pretrained ViT Model to File and Inspecting Its Size,0 days 00:05:00,False
+278,10,269,269. Discussing the Trade-Offs Between Using a Larger Model for Deployments,0 days 00:04:00,False
+279,10,270,270. Making Predictions on a Custom Image with Our Pretrained ViT,0 days 00:04:00,False
+280,10,271,"271. PyTorch Paper Replicating: Main Takeaways, Exercises and Extra-Curriculum",0 days 00:07:00,False
+281,11,-1,Section 11: PyTorch Model Deployment,0 days 00:00:00,True
+282,11,272,272. What is Machine Learning Model Deployment - Why Deploy a Machine Learning Model,0 days 00:10:00,False
+283,11,273,273. Three Questions to Ask for Machine Learning Model Deployment,0 days 00:07:00,False
+284,11,274,274. Where Is My Model Going to Go?,0 days 00:14:00,False
+285,11,275,275. How Is My Model Going to Function?,0 days 00:08:00,False
+286,11,276,276. Some Tools and Places to Deploy Machine Learning Models,0 days 00:06:00,False
+287,11,277,277. What We Are Going to Cover,0 days 00:04:00,False
+288,11,278,278. Getting Setup to Code,0 days 00:06:00,False
+289,11,279,279. Downloading a Dataset for Food Vision Mini,0 days 00:03:00,False
+290,11,280,280. Outlining Our Food Vision Mini Deployment Goals and Modelling Experiments,0 days 00:08:00,False
+291,11,281,281. Creating an EffNetB2 Feature Extractor Model,0 days 00:10:00,False
+292,11,282,282. Create a Function to Make an EffNetB2 Feature Extractor Model and Transforms,0 days 00:06:00,False
+293,11,283,283. Creating DataLoaders for EffNetB2,0 days 00:04:00,False
+294,11,284,284. Training Our EffNetB2 Feature Extractor and Inspecting the Loss Curves,0 days 00:09:00,False
+295,11,285,285. Saving Our EffNetB2 Model to File,0 days 00:03:00,False
+296,11,286,286. Getting the Size of Our EffNetB2 Model in Megabytes,0 days 00:06:00,False
+297,11,287,287. Collecting Important Statistics and Performance Metrics for Our EffNetB2 Model,0 days 00:07:00,False
+298,11,288,288. Creating a Vision Transformer Feature Extractor Model,0 days 00:08:00,False
+299,11,289,289. Creating DataLoaders for Our ViT Feature Extractor Model,0 days 00:03:00,False
+300,11,290,290. Training Our ViT Feature Extractor Model and Inspecting Its Loss Curves,0 days 00:06:00,False
+301,11,291,291. Saving Our ViT Feature Extractor and Inspecting Its Size,0 days 00:05:00,False
+302,11,292,292. Collecting Stats About Our-ViT Feature Extractor,0 days 00:06:00,False
+303,11,293,293. Outlining the Steps for Making and Timing Predictions for Our Models,0 days 00:11:00,False
+304,11,294,294. Creating a Function to Make and Time Predictions with Our Models,0 days 00:16:00,False
+305,11,295,295. Making and Timing Predictions with EffNetB2,0 days 00:11:00,False
+306,11,296,296. Making and Timing Predictions with ViT,0 days 00:08:00,False
+307,11,297,297. Comparing EffNetB2 and ViT Model Statistics,0 days 00:12:00,False
+308,11,298,298. Visualizing the  Performance vs Speed Trade-off,0 days 00:16:00,False
+309,11,299,299. Gradio Overview and Installation,0 days 00:09:00,False
+310,11,300,300. Gradio Function Outline,0 days 00:09:00,False
+311,11,301,301. Creating a Predict Function to Map Our Food Vision Mini Inputs to Outputs,0 days 00:10:00,False
+312,11,302,302. Creating a List of Examples to Pass to Our Gradio Demo,0 days 00:05:00,False
+313,11,303,303. Bringing Food Vision Mini to Life in a Live Web Application,0 days 00:12:00,False
+314,11,304,304. Getting Ready to Deploy Our App Hugging Face Spaces Overview,0 days 00:06:00,False
+315,11,305,305. Outlining the File Structure of Our Deployed App,0 days 00:08:00,False
+316,11,306,306. Creating a Food Vision Mini Demo Directory to House Our App Files,0 days 00:04:00,False
+317,11,307,307. Creating an Examples Directory with Example Food Vision Mini Images,0 days 00:09:00,False
+318,11,308,308. Writing Code to Move Our Saved EffNetB2 Model File,0 days 00:08:00,False
+319,11,309,309. Turning Our EffNetB2 Model Creation Function Into a Python Script,0 days 00:04:00,False
+320,11,310,310. Turning Our Food Vision Mini Demo App Into a Python Script,0 days 00:13:00,False
+321,11,311,311. Creating a Requirements File for Our Food Vision Mini App,0 days 00:04:00,False
+322,11,312,312. Downloading Our Food Vision Mini App Files from Google Colab,0 days 00:12:00,False
+323,11,313,313. Uploading Our Food Vision Mini App to Hugging Face Spaces Programmatically,0 days 00:14:00,False
+324,11,314,314. Running Food Vision Mini on Hugging Face Spaces and Trying it Out,0 days 00:08:00,False
+325,11,315,315. Food Vision Big Project Outline,0 days 00:04:00,False
+326,11,316,316. Preparing an EffNetB2 Feature Extractor Model for Food Vision Big,0 days 00:10:00,False
+327,11,317,317. Downloading the Food 101 Dataset,0 days 00:08:00,False
+328,11,318,318. Creating a Function to Split Our Food 101 Dataset into Smaller Portions,0 days 00:14:00,False
+329,11,319,319. Turning Our Food 101 Datasets into DataLoaders,0 days 00:07:00,False
+330,11,320,320. Training Food Vision Big: Our Biggest Model Yet!,0 days 00:20:00,False
+331,11,321,321. Outlining the File Structure for Our Food Vision Big,0 days 00:06:00,False
+332,11,322,322. Downloading an Example Image and Moving Our Food Vision Big Model File,0 days 00:04:00,False
+333,11,323,323. Saving Food 101 Class Names to a Text File and Reading them Back In,0 days 00:07:00,False
+334,11,324,324. Turning Our EffNetB2 Feature Extractor Creation Function into a Python Script,0 days 00:02:00,False
+335,11,325,325. Creating an App Script for Our Food Vision Big Model Gradio Demo,0 days 00:11:00,False
+336,11,326,326. Zipping and Downloading Our Food Vision Big App Files,0 days 00:04:00,False
+337,11,327,327. Deploying Food Vision Big to Hugging Face Spaces,0 days 00:14:00,False
+338,11,328,"328. PyTorch Mode Deployment: Main Takeaways, Extra-Curriculum and Exercises",0 days 00:06:00,False
+339,12,-1,Section 12: Introduction to PyTorch 2.0 and torch.compile,0 days 00:00:00,True
+340,12,329,329. Introduction to PyTorch 2.0,0 days 00:06:00,False
+341,12,330,330. What We Are Going to Cover and PyTorch 2 Reference Materials,0 days 00:01:00,False
+342,12,331,331. Getting Started with PyTorch 2 in Google Colab,0 days 00:04:00,False
+343,12,332,332. PyTorch 2.0 - 30 Second Intro,0 days 00:03:00,False
+344,12,333,333. Getting Setup for PyTorch 2,0 days 00:02:00,False
+345,12,334,334. Getting Info from Our GPUs and Seeing if They're Capable of Using PyTorch 2,0 days 00:07:00,False
+346,12,335,335. Setting the Default Device in PyTorch 2,0 days 00:10:00,False
+347,12,336,336. Discussing the Experiments We Are Going to Run for PyTorch 2,0 days 00:07:00,False
+348,12,337,337. Introduction to PyTorch 2,0 days 00:06:00,False
+349,12,338,338. Creating a Function to Setup Our Model and Transforms,0 days 00:10:00,False
+350,12,339,339. Discussing How to Get Better Relative Speedups for Training Models,0 days 00:08:00,False
+351,12,340,340. Setting the Batch Size and Data Size Programmatically,0 days 00:07:00,False
+352,12,341,341. Getting More Potential Speedups with TensorFloat-32,0 days 00:10:00,False
+353,12,342,342. Downloading the CIFAR10 Dataset,0 days 00:07:00,False
+354,12,343,343. Creating Training and Test DataLoaders,0 days 00:08:00,False
+355,12,344,344. Preparing Training and Testing Loops with Timing Steps for PyTorch 2.0 timing,0 days 00:05:00,False
+356,12,345,345. Experiment 1 - Single Run without torch.compile,0 days 00:08:00,False
+357,12,346,346. Experiment 2  - Single Run with torch.compile,0 days 00:11:00,False
+358,12,347,347. Comparing the Results of Experiment 1 and 2,0 days 00:11:00,False
+359,12,348,348. Saving the Results of Experiment 1 and 2,0 days 00:05:00,False
+360,12,349,349. Preparing Functions for Experiment 3 and 4,0 days 00:13:00,False
+361,12,350,350. Experiment 3 - Training a Non-Compiled Model for Multiple Runs,0 days 00:13:00,False
+362,12,351,351. Experiment 4 - Training a Compiled Model for Multiple Runs,0 days 00:10:00,False
+363,12,352,352. Comparing the Results of Experiment 3 and 4,0 days 00:05:00,False
+364,12,353,353. Potential Extensions and Resources to Learn More,0 days 00:06:00,False
+365,13,-1,Section 13: Bonus Section,0 days 00:00:00,True
+366,13,354,354. Special Bonus Lecture,0 days 00:01:00,False
+367,14,-1,Section 14: Where To Go From Here?,0 days 00:00:00,True
+368,14,355,355. Thank You!,0 days 00:01:00,False
+369,14,356,356. Become An Alumni,0 days 00:01:00,False
+370,14,357,357. Endorsements on LinkedIn,0 days 00:01:00,False
+371,14,358,358. Learning Guideline,0 days 00:01:00,False
