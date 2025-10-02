@@ -6,7 +6,7 @@ from tqdm import tqdm
 import pandas as pd
 from pyfiglet import Figlet
 
-PROGRESS_PARQUET_PATH = Path("./progress/progress.parquet")
+PROGRESS_PARQUET_PATH = Path("/Users/ridamansour/DataspellProjects/PyTorchLearning/Progress/progress.parquet")
 
 def get_progress_data(path: Path = PROGRESS_PARQUET_PATH) -> pd.DataFrame:
     """
@@ -209,4 +209,9 @@ def progress_report() -> None:
     print(f"\033[1m\033[93mTotal videos done:\033[0m {done_videos_count} out of {total_videos} finished ({done_videos_count} videos remaining).")
     for section in range(1, 15):
         print(progress_in_a_section(section), end="\n")
+
+if __name__ == "__main__":
+    monthly_progress()
+    progress_report()
+    progress_pie_chart()
 
