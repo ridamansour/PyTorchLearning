@@ -225,7 +225,7 @@ def strip_ansi_codes(text: str) -> str:
     return ansi_escape.sub('', text)
 def progress_report_to_README() -> None:
     report = progress_report()
-    clean_report = f"```\nProgress.course_prog_func.progress_report() \n{strip_ansi_codes(report)}```\n"
+    clean_report = f"```\nProgress.course_prog_func.progress_report() github hook \n{strip_ansi_codes(report)}```\n"
 
     with open("README.md", "w", encoding="utf-8") as f:
         f.write(clean_report)
