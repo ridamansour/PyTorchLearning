@@ -5,12 +5,15 @@ from pathlib import Path
 from tqdm import tqdm
 import pandas as pd
 
-def get_progress_data(path: Path = "./progress.parquet") -> pd.DataFrame:
+PROGRESS_PARQUET_PATH = Path("./progress/progress.parquet")
+
+def get_progress_data(path: Path = PROGRESS_PARQUET_PATH) -> pd.DataFrame:
     """
     This function reads the `progress.parquet` file into a pandas DataFrame.
     :param path: The path to the `progress.parquet` file
     :return: The pandas DataFrame
     """
+    path = Path(path)
     df = pd.read_parquet(path)
     df["section_num"] = df["section_num"].astype("Int64")
     df["Vid idx"] = df["Vid idx"].astype("Int64")
@@ -19,6 +22,60 @@ def get_progress_data(path: Path = "./progress.parquet") -> pd.DataFrame:
     df["done"] = df["done"].astype("boolean")
     df["finished_date"] = pd.to_datetime(df["finished_date"])
     return df
+
+from typing import Optional
+from tqdm import tqdm
+
+def progress_in_a_section(section: int, show_section_num:bool=True) -> str:
+    """
+    Returns a string showing the progress of a section in the course using a progress bar.
+    :param section: The index of the section
+    :param show_section_num: Whether to show the section number (i.e. `Section 3:`)
+    :return: str
+    """
+    df = get_progress_data()
+
+    mask_done = (df["section_num"] == section) & (df["done"] == True)
+    mask_remaining = (df["section_num"] == section) & (df["done"] == False)
+
+    total_videos = (mask_done | mask_remaining).sum()
+    remaining_videos = mask_remaining.sum()
+    done_videos = total_videos - remaining_videos
+
+    total_duration = df.loc[mask_remaining, "duration"].sum()
+    formatted = _format_duration(total_duration)
+    header = ""
+    # Section header
+    if show_section_num:
+        header = f"\nSection {section}: "
+
+    if remaining_videos > 0:
+        header += f"{remaining_videos} videos remaining, {formatted} time to finish the section"
+    else:
+        header += f"Done"
+
+    # Progress bar
+    if total_videos > 0:
+        progress = tqdm.format_meter(
+            n=done_videos,
+            total=total_videos,
+            elapsed=0,
+            ncols=40,
+            bar_format="{l_bar}{bar} {n_fmt}/{total_fmt}",
+            colour="BLUE"
+        )
+        progress_line = ""
+        if show_section_num:
+            progress_line = f"Section {section}: "
+        progress_line += f"{progress}"
+    else:
+        progress_line = ""
+
+    # Combine everything
+    result = header + ("\n" + progress_line if progress_line else "")
+    return result
+
+
 def update_progress(video_index:int, done:bool, date: pd.Timestamp = pd.Timestamp.now()):
     """
     This function updates the progress of the course to the `progress.parquet` file.
@@ -27,17 +84,20 @@ def update_progress(video_index:int, done:bool, date: pd.Timestamp = pd.Timestam
     :param done: True if the video is done
     :return: None
     """
-
-    df = pd.get_progress_data("./progress.parquet")
+    df = get_progress_data()
     mask = (df["Vid idx"] == video_index)
     df.loc[mask, "done"] = done
-    status = "done" if df.loc[mask, "done"].values[0] else "tasked"
+    status = "Done" if df.loc[mask, "done"].values[0] else "Not done"
     df.loc[mask, "finished_date"] = date if done else pd.NaT
-    df.to_parquet("./progress.parquet")
+    df.to_parquet(PROGRESS_PARQUET_PATH)
+    formatted_date = date.strftime("%d %b %Y %I:%M %p") if done else "N/A"
     print(f"Updated progress report. \n"
-          f"Section: {df.loc[mask].values[0][0]} \n"
           f"Video: {df.loc[mask].values[0][1]}. {df.loc[mask].values[0][2]} \n"
-          f"Status: {status}")
+          f"Status: {status} \n"
+          f"Date: {formatted_date} \n"
+          # f"Section: {df.loc[mask].values[0][0]} \n"
+          f"Section progress: {progress_in_a_section(df.loc[mask].values[0][0], True)} \n"
+          )
 
 def monthly_progress() -> None:
     """
@@ -66,9 +126,9 @@ def monthly_progress() -> None:
     formatter = FuncFormatter(lambda x, pos: f"{x:.1f}h")
     plt.gca().yaxis.set_major_formatter(formatter)
     plt.tight_layout()
-    plt.show()
+    plt.show();
 
-def done_progress_pie_chart() -> None:
+def progress_pie_chart() -> None:
     """
     This function creates a pie chart of the progress of the course.
     :return: None
@@ -80,8 +140,8 @@ def done_progress_pie_chart() -> None:
 
     times = [done_sum.total_seconds() / 3600, not_done_sum.total_seconds() / 3600]
     labels = [
-        f"Done ({times[0]:.1f}h)",
-        f"Not Done ({times[1]:.1f}h)"
+        f"Done\n({times[0]:.1f}h)",
+        f"Not Done\n({times[1]:.1f}h)"
     ]
 
     plt.figure(figsize=(6, 6))
@@ -90,10 +150,11 @@ def done_progress_pie_chart() -> None:
         labels=labels,
         autopct="%1.1f%%",
         startangle=90,
-        colors=["#4CAF50", "#FF6F61"]
+        colors=["#4CAF50", "#FF6F61"],
+        textprops = {"fontsize": 14}
     )
-    plt.title("Proportion of Time: Watched vs Not Watched")
-    plt.show()
+    plt.title("Course Progress: Watched vs Not Watched", fontsize=16)
+    plt.show();
 
 def _format_duration(td: timedelta) -> str:
     """
@@ -106,44 +167,11 @@ def _format_duration(td: timedelta) -> str:
     minutes, _ = divmod(remainder, 60)
     return f"{f'{days}d ' if days!=0 else ''}{f'{hours}h ' if hours!=0 else ''}{f'{minutes}m' if minutes!=0 else ''}"
 
-def progress_in_a_section(section: int) -> None:
-    """
-    This function shows the progress of a section in the course using a progress bar.
-    :param section: The index of the section
-    :return: None
-    """
-    df = get_progress_data()
 
-    mask_done = (df["section_num"] == section) & (df["done"] == True)
-    mask_remaining = (df["section_num"] == section) & (df["done"] == False)
-
-    total_videos = (mask_done | mask_remaining).sum()
-    remaining_videos = mask_remaining.sum()
-    done_videos = total_videos - remaining_videos
-
-    total_duration = df.loc[mask_remaining, "duration"].sum()
-    formatted = _format_duration(total_duration)
-
-    # Section header
-    if remaining_videos > 0:
-        print(f"\nSection {section}: {formatted}, {remaining_videos} videos remaining")
-    else:
-        print(f"\nSection {section}: Done")
-
-    # Progress bar
-    if total_videos > 0:
-        tqdm.write(f"Section {section}: " +
-                   tqdm.format_meter(done_videos,
-                                     total_videos,
-                                     0,
-                                     ncols=40,
-                                     bar_format="{l_bar}{bar} {n_fmt}/{total_fmt}",
-                                     colour="BLUE")
-                   )
 def progress_report() -> None:
     """
     This function shows the progress report of the course with progress bars.
     :return:
     """
     for section in range(1, 15):
-        progress_in_a_section(section)
+        print(progress_in_a_section(section))
