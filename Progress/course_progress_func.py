@@ -1,4 +1,6 @@
 from datetime import timedelta
+from typing import re
+
 import matplotlib.pyplot as plt
 from matplotlib.ticker import FuncFormatter
 from pathlib import Path
@@ -191,7 +193,7 @@ def progress_pie_chart() -> None:
 
 
 
-def progress_report() -> None:
+def progress_report() -> str:
     """
     This function shows the progress report of the course with progress bars.
     :return:
@@ -203,17 +205,33 @@ def progress_report() -> None:
     done_videos_count = df.loc[(df["done"] == True) & df["Vid idx"] != -1].__len__()
     not_done_videos_count = df.loc[(df["done"] == False) & df["Vid idx"] != -1].__len__()
     total_videos = done_videos_count+not_done_videos_count
-
+    report = ""
     f = Figlet(font="isometric3", width=120)
-    print(f"\033[1m\033[94m{f.renderText('Progress Report')}\033[0m")
-    print(f"\033[1m\033[93mCourse:\033[0m {progress_bar(done_videos_count, total_videos)}")
-    print(f"\033[1m\033[93mTotal time done:\033[0m {_format_duration(done_time_sum)} out of {_format_duration(not_done_time_sum + done_time_sum)} watched ({_format_duration(not_done_time_sum)} remaining).")
-    print(f"\033[1m\033[93mTotal videos done:\033[0m {done_videos_count} out of {total_videos} finished ({done_videos_count} videos remaining).")
+    report += f"\033[1m\033[94m{f.renderText('Progress Report')}\033[0m\n"
+    report += f"\033[1m\033[93mCourse:\033[0m {progress_bar(done_videos_count, total_videos)}\n"
+    report += f"\033[1m\033[93mTotal time done:\033[0m {_format_duration(done_time_sum)} out of {_format_duration(not_done_time_sum + done_time_sum)} watched ({_format_duration(not_done_time_sum)} remaining).\n"
+    report += f"\033[1m\033[93mTotal videos done:\033[0m {done_videos_count} out of {total_videos} finished ({done_videos_count} videos remaining).\n"
     for section in range(1, 15):
-        print(progress_in_a_section(section), end="\n")
+        report += progress_in_a_section(section) + "\n"
+    return report
+def progress_report_print() -> None:
+    print(progress_report())
+
+def strip_ansi_codes(text: str) -> str:
+    """
+    Remove ANSI escape sequences from text.
+    """
+    ansi_escape = re.compile(r'\x1B\[[0-?]*[ -/]*[@-~]')
+    return ansi_escape.sub('', text)
+def progress_report_to_README() -> None:
+    report = progress_report()
+    clean_report = f"```\nProgress.course_prog_func.progress_report() \n{strip_ansi_codes(report)}```\n"
+
+    with open("README.md", "w", encoding="utf-8") as f:
+        f.write(clean_report)
 
 if __name__ == "__main__":
     monthly_progress()
-    progress_report()
+    progress_report_print()
     progress_pie_chart()
 
