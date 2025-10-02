@@ -4,6 +4,7 @@ from matplotlib.ticker import FuncFormatter
 from pathlib import Path
 from tqdm import tqdm
 import pandas as pd
+from pyfiglet import Figlet
 
 PROGRESS_PARQUET_PATH = Path("./progress/progress.parquet")
 
@@ -23,8 +24,34 @@ def get_progress_data(path: Path = PROGRESS_PARQUET_PATH) -> pd.DataFrame:
     df["finished_date"] = pd.to_datetime(df["finished_date"])
     return df
 
-from typing import Optional
-from tqdm import tqdm
+def _format_duration(td: timedelta) -> str:
+    """
+    Makes a string into a timedelta object.
+    :param td: timedelta
+    :return: The formatted string
+    """
+    # days = td.days*24
+    hours, remainder = divmod(td.seconds, 3600)
+    hours += td.days*24
+    minutes, _ = divmod(remainder, 60)
+    # {f'{days}d ' if days!=0 else ''}
+    return f"{f'{hours}h ' if hours!=0 else ''}{f'{minutes}m' if minutes!=0 else ''}"
+
+def progress_bar(x: int, total: int):
+    """
+    A function that returns a progress bar.
+    :param x: the progress (n)
+    :param total: the total
+    :return: A progress bar
+    """
+    return tqdm.format_meter(
+        n=x,
+        total=total,
+        elapsed=0,
+        ncols=40,
+        bar_format="{l_bar}{bar} {n_fmt}/{total_fmt}",
+        colour="BLUE"
+    )
 
 def progress_in_a_section(section: int, show_section_num:bool=True) -> str:
     """
@@ -47,26 +74,19 @@ def progress_in_a_section(section: int, show_section_num:bool=True) -> str:
     header = ""
     # Section header
     if show_section_num:
-        header = f"\nSection {section}: "
+        header = f"\n\033[1mSection {section}: \033[0m"
 
     if remaining_videos > 0:
-        header += f"{remaining_videos} videos remaining, {formatted} time to finish the section"
+        header += f"{remaining_videos} videos remaining, {formatted} to finish the section"
     else:
-        header += f"Done"
+        header += f"\033[92mDone\033[0m"
 
     # Progress bar
     if total_videos > 0:
-        progress = tqdm.format_meter(
-            n=done_videos,
-            total=total_videos,
-            elapsed=0,
-            ncols=40,
-            bar_format="{l_bar}{bar} {n_fmt}/{total_fmt}",
-            colour="BLUE"
-        )
+        progress = progress_bar(done_videos, total_videos)
         progress_line = ""
         if show_section_num:
-            progress_line = f"Section {section}: "
+            progress_line = f"\033[1mSection {section}: \033[0m"
         progress_line += f"{progress}"
     else:
         progress_line = ""
@@ -100,12 +120,13 @@ def update_progress(video_index:int, done:bool, date: pd.Timestamp = pd.Timestam
     df.to_parquet(PROGRESS_PARQUET_PATH)
     formatted_date = date.strftime("%d %b %Y %I:%M %p") if done else "N/A"
 
-    print(f"Updated progress report. \n"
-          f"Video: {df.loc[mask].values[0][1]}. {df.loc[mask].values[0][2]} \n"
-          f"Status: {status} \n"
-          f"Date: {formatted_date} \n"
+    print(f"\033[1m\033[92mUpdated progress report.\033[0m \n"
+          f"\033[1mVideo:\033[0m {df.loc[mask].values[0][1]}. {df.loc[mask].values[0][2]} \n"
+          f"\033[1mDuration:\033[0m {_format_duration(df.loc[mask].values[0][3])} \n"
+          f"\033[1mStatus:\033[0m {status} \n"
+          f"\033[1mDate:\033[0m {formatted_date} \n"
           # f"Section: {df.loc[mask].values[0][0]} \n"
-          f"Section progress: {progress_in_a_section(df.loc[mask].values[0][0], True)} \n"
+          f"\033[1mSection progress:\033[0m {progress_in_a_section(df.loc[mask].values[0][0], True)}"
           )
 
 def monthly_progress() -> None:
@@ -165,16 +186,7 @@ def progress_pie_chart() -> None:
     plt.title("Course Progress: Watched vs Not Watched", fontsize=16)
     plt.show();
 
-def _format_duration(td: timedelta) -> str:
-    """
-    Makes a string into a timedelta object.
-    :param td: timedelta
-    :return: The formatted string
-    """
-    days = td.days
-    hours, remainder = divmod(td.seconds, 3600)
-    minutes, _ = divmod(remainder, 60)
-    return f"{f'{days}d ' if days!=0 else ''}{f'{hours}h ' if hours!=0 else ''}{f'{minutes}m' if minutes!=0 else ''}"
+
 
 
 def progress_report() -> None:
@@ -182,5 +194,19 @@ def progress_report() -> None:
     This function shows the progress report of the course with progress bars.
     :return:
     """
+    df = get_progress_data()
+
+    done_time_sum: pd.Timedelta = df.loc[df["done"] == True, "duration"].sum()
+    not_done_time_sum: pd.Timedelta = df.loc[df["done"] == False, "duration"].sum()
+    done_videos_count = df.loc[(df["done"] == True) & df["Vid idx"] != -1].__len__()
+    not_done_videos_count = df.loc[(df["done"] == False) & df["Vid idx"] != -1].__len__()
+    total_videos = done_videos_count+not_done_videos_count
+
+    f = Figlet(font="isometric3", width=120)
+    print(f"\033[1m\033[94m{f.renderText('Progress Report')}\033[0m")
+    print(f"\033[1m\033[93mCourse:\033[0m {progress_bar(done_videos_count, total_videos)}")
+    print(f"\033[1m\033[93mTotal time done:\033[0m {_format_duration(done_time_sum)} out of {_format_duration(not_done_time_sum + done_time_sum)} watched ({_format_duration(not_done_time_sum)} remaining).")
+    print(f"\033[1m\033[93mTotal videos done:\033[0m {done_videos_count} out of {total_videos} finished ({done_videos_count} videos remaining).")
     for section in range(1, 15):
-        print(progress_in_a_section(section))
+        print(progress_in_a_section(section), end="\n")
+
