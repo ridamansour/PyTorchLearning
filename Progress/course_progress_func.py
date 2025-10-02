@@ -35,8 +35,8 @@ def progress_in_a_section(section: int, show_section_num:bool=True) -> str:
     """
     df = get_progress_data()
 
-    mask_done = (df["section_num"] == section) & (df["done"] == True)
-    mask_remaining = (df["section_num"] == section) & (df["done"] == False)
+    mask_done = (df["section_num"] == section) & (df["done"] == True) & (df["Vid idx"] != -1)
+    mask_remaining = (df["section_num"] == section) & (df["done"] == False) & (df["Vid idx"] != -1)
 
     total_videos = (mask_done | mask_remaining).sum()
     remaining_videos = mask_remaining.sum()
@@ -89,8 +89,17 @@ def update_progress(video_index:int, done:bool, date: pd.Timestamp = pd.Timestam
     df.loc[mask, "done"] = done
     status = "Done" if df.loc[mask, "done"].values[0] else "Not done"
     df.loc[mask, "finished_date"] = date if done else pd.NaT
+
+    # Check if all videos in the section are done
+    section_num = df.loc[mask, "section_num"].values[0]
+    section_videos_mask = (df["section_num"] == section_num) & (df["Vid idx"] != -1)
+
+    if df.loc[section_videos_mask, "done"].all():
+        df.loc[(df["section_num"] == section_num) & (df["Vid idx"] == -1), "done"] = True # Check the title of the section
+
     df.to_parquet(PROGRESS_PARQUET_PATH)
     formatted_date = date.strftime("%d %b %Y %I:%M %p") if done else "N/A"
+
     print(f"Updated progress report. \n"
           f"Video: {df.loc[mask].values[0][1]}. {df.loc[mask].values[0][2]} \n"
           f"Status: {status} \n"
