@@ -73,20 +73,22 @@ def progress_in_a_section(section: int, show_section_num:bool=True) -> str:
     formatted = _format_duration(total_duration)
     header = ""
     # Section header
+    section_title = df.loc[(df["section_num"] == section) & (df["Vid idx"] == -1), "title"].iloc[0]
+    section_title = section_title[section_title.find(": ")+2:]
     if show_section_num:
-        header = f"\n\033[1mSection {section}: \033[0m"
+        header = f"\n\033[1mSection :\033[0m {section}.{section_title}\n"
 
     if remaining_videos > 0:
-        header += f"{remaining_videos} videos remaining, {formatted} to finish the section"
+        header += (f"\033[1mStatus  :\033[0m {remaining_videos} videos remaining, {formatted} to finish the section")
     else:
-        header += f"\033[92mDone\033[0m"
+        header +=  f"\033[1mStatus  :\033[0m \033[92mDone\033[0m"
 
     # Progress bar
     if total_videos > 0:
         progress = progress_bar(done_videos, total_videos)
         progress_line = ""
         if show_section_num:
-            progress_line = f"\033[1mSection {section}: \033[0m"
+            progress_line = f"\033[1mProgress: \033[0m"
         progress_line += f"{progress}"
     else:
         progress_line = ""
