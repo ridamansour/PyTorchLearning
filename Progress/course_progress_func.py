@@ -1,5 +1,5 @@
 from datetime import timedelta
-from typing import re
+import re
 
 import matplotlib.pyplot as plt
 from matplotlib.ticker import FuncFormatter

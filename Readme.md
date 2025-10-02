@@ -1,6 +1,5 @@
-
 ```
-Progress.course_prog_func.progress_report()
+Progress.course_prog_func.progress_report() 
       ___         ___           ___           ___           ___           ___           ___           ___     
      /  /\       /  /\         /  /\         /  /\         /  /\         /  /\         /  /\         /  /\    
     /  /::\     /  /::\       /  /::\       /  /:/_       /  /::\       /  /:/_       /  /:/_       /  /:/_   
@@ -25,7 +24,7 @@ Progress.course_prog_func.progress_report()
      \__\/         \__\/         \__\/       \__\/         \__\/                
 
 Course:  50%|█████████████▌              372/744
-Total time done: 24h 36m out of 52h 15m watched (27h 39m remaining).
+Total time done: 24h 22m out of 52h 15m watched (27h 53m remaining).
 Total videos done: 372 out of 744 finished (372 videos remaining).
 
 Section : 1.Introduction
@@ -49,8 +48,8 @@ Status  : Done
 Progress: 100%|█████████████████████████████ 34/34
 
 Section : 6.PyTorch Custom Datasets
-Status  : 9 videos remaining, 1h 11m to finish the section
-Progress:  76%|█████████████████████▉        28/37
+Status  : 10 videos remaining, 1h 25m to finish the section
+Progress:  73%|█████████████████████▏        27/37
 
 Section : 7.PyTorch Going Modular
 Status  : 10 videos remaining, 1h 33m to finish the section
