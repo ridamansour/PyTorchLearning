@@ -100,7 +100,7 @@ def progress_in_a_section(section: int, show_section_num:bool=True) -> str:
     return result
 
 
-def update_progress(video_index:int, done:bool, date: pd.Timestamp = pd.Timestamp.now()):
+def update_progress(video_index:int, done:bool, date: pd.Timestamp = None):
     """
     This function updates the progress of the course to the `progress.parquet` file.
     :param video_index: The index of the video
@@ -108,12 +108,13 @@ def update_progress(video_index:int, done:bool, date: pd.Timestamp = pd.Timestam
     :param done: True if the video is done
     :return: None
     """
+    if date is None:
+        date = pd.Timestamp.now()
     df = get_progress_data()
     mask = (df["Vid idx"] == video_index)
     df.loc[mask, "done"] = done
     status = "Done" if df.loc[mask, "done"].values[0] else "Not done"
     df.loc[mask, "finished_date"] = date if done else pd.NaT
-
     # Check if all videos in the section are done
     section_num = df.loc[mask, "section_num"].values[0]
     section_videos_mask = (df["section_num"] == section_num) & (df["Vid idx"] != -1)
@@ -202,10 +203,12 @@ def progress_report() -> str:
 
     done_time_sum: pd.Timedelta = df.loc[df["done"] == True, "duration"].sum()
     not_done_time_sum: pd.Timedelta = df.loc[df["done"] == False, "duration"].sum()
-    done_videos_count = df.loc[(df["done"] == True) & df["Vid idx"] != -1].__len__()
-    not_done_videos_count = df.loc[(df["done"] == False) & df["Vid idx"] != -1].__len__()
+    done_videos_count = df.loc[(df["done"] == True) & (df["Vid idx"] != -1)].__len__()
+    not_done_videos_count = df.loc[(df["done"] != True) & (df["Vid idx"] != -1)].__len__()
     total_videos = done_videos_count+not_done_videos_count
     report = ""
+    # print(f"{df.loc[(df["done"] == True) & (df["Vid idx"] != -1)].shape=}\n 
+    #         {df.loc[(df["done"] == True) & df["Vid idx"] != -1].shape=}")
     f = Figlet(font="isometric3", width=120)
     report += f"\033[1m\033[94m{f.renderText('Progress Report')}\033[0m\n"
     report += f"\033[1m\033[93mCourse:\033[0m {progress_bar(done_videos_count, total_videos)}\n"
