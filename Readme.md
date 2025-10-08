@@ -23,9 +23,9 @@ Progress.course_prog_func.progress_report() github pre-hook
     \  \:\        \  \::/       \  \:\      \  \::/       \  \:\           \__\/
      \__\/         \__\/         \__\/       \__\/         \__\/                
 
-Course:  47%|████████████▋               168/358
-Total time done: 25h 28m out of 52h 15m watched (26h 47m remaining).
-Total videos done: 168 out of 358 finished (168 videos remaining).
+Course:  48%|████████████▉               172/358
+Total time done: 26h  out of 52h 15m watched (26h 15m remaining).
+Total videos done: 172 out of 358 finished (172 videos remaining).
 
 Section : 1.Introduction
 Status  : Done
@@ -48,12 +48,12 @@ Status  : Done
 Progress: 100%|█████████████████████████████ 34/34
 
 Section : 6.PyTorch Custom Datasets
-Status  : 2 videos remaining, 19m to finish the section
-Progress:  95%|███████████████████████████▍  35/37
+Status  : Done
+Progress: 100%|█████████████████████████████ 37/37
 
 Section : 7.PyTorch Going Modular
-Status  : 10 videos remaining, 1h 33m to finish the section
-Progress:   0%|                               0/10
+Status  : 9 videos remaining, 1h 21m to finish the section
+Progress:  10%|███                            1/10
 
 Section : 8.PyTorch Transfer Learning
 Status  : 19 videos remaining, 2h 44m to finish the section
@@ -76,8 +76,8 @@ Status  : 25 videos remaining, 3h 3m to finish the section
 Progress:   0%|                               0/25
 
 Section : 13.Bonus Section
-Status  : 1 videos remaining, 1m to finish the section
-Progress:   0%|                                0/1
+Status  : Done
+Progress: 100%|███████████████████████████████ 1/1
 
 Section : 14.Where To Go From Here?
 Status  : 4 videos remaining, 4m to finish the section
