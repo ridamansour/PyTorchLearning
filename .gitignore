@@ -1,3 +1,5 @@
+__pycache__/
+*.pyc
 /data/pizza_steak_sushi.zip
 /data/pizza_steak_sushi
 /Progress/course.html
