@@ -23,9 +23,9 @@ Progress.course_prog_func.progress_report() github pre-hook
     \  \:\        \  \::/       \  \:\      \  \::/       \  \:\           \__\/
      \__\/         \__\/         \__\/       \__\/         \__\/                
 
-Course:  51%|█████████████▋              181/358
-Total time done: 27h 21m out of 52h 15m watched (24h 54m remaining).
-Total videos done: 181 out of 358 finished (181 videos remaining).
+Course:  51%|█████████████▊              183/358
+Total time done: 27h 39m out of 52h 15m watched (24h 36m remaining).
+Total videos done: 183 out of 358 finished (183 videos remaining).
 
 Section : 1.Introduction
 Status  : Done
@@ -56,8 +56,8 @@ Status  : Done
 Progress: 100%|█████████████████████████████ 10/10
 
 Section : 8.PyTorch Transfer Learning
-Status  : 19 videos remaining, 2h 44m to finish the section
-Progress:   0%|                               0/19
+Status  : 17 videos remaining, 2h 26m to finish the section
+Progress:  11%|███▏                           2/19
 
 Section : 9.PyTorch Experiment Tracking
 Status  : 22 videos remaining, 3h 11m to finish the section
