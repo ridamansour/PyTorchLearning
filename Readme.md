@@ -23,9 +23,9 @@ Progress.course_prog_func.progress_report() github pre-hook
     \  \:\        \  \::/       \  \:\      \  \::/       \  \:\           \__\/
      \__\/         \__\/         \__\/       \__\/         \__\/                
 
-Course:  46%|████████████▌               166/358
-Total time done: 25h 10m out of 52h 15m watched (27h 5m remaining).
-Total videos done: 166 out of 358 finished (166 videos remaining).
+Course:  47%|████████████▋               168/358
+Total time done: 25h 28m out of 52h 15m watched (26h 47m remaining).
+Total videos done: 168 out of 358 finished (168 videos remaining).
 
 Section : 1.Introduction
 Status  : Done
@@ -48,8 +48,8 @@ Status  : Done
 Progress: 100%|█████████████████████████████ 34/34
 
 Section : 6.PyTorch Custom Datasets
-Status  : 4 videos remaining, 37m to finish the section
-Progress:  89%|█████████████████████████▊    33/37
+Status  : 2 videos remaining, 19m to finish the section
+Progress:  95%|███████████████████████████▍  35/37
 
 Section : 7.PyTorch Going Modular
 Status  : 10 videos remaining, 1h 33m to finish the section
