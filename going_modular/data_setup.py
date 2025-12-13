@@ -2,6 +2,7 @@
 Contains functionality for creating PyTorch DataLoaders for image classification data.
 """
 import os
+from pathlib import Path
 
 from torchvision import datasets, transforms
 from torch.utils.data import DataLoader
@@ -9,8 +10,8 @@ from torch.utils.data import DataLoader
 NUM_WORKERS = os.cpu_count()
 
 def create_dataloaders(
-        train_dir: str,
-        test_dir: str,
+        train_dir: str | Path,
+        test_dir: str | Path,
         transform: transforms.Compose,
         batch_size: int,
         num_workers: int = NUM_WORKERS):
