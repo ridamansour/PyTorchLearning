@@ -71,8 +71,8 @@ def progress_in_a_section(section: int, show_section_num:bool=True) -> str:
     remaining_videos = mask_remaining.sum()
     done_videos = total_videos - remaining_videos
 
-    total_duration = df.loc[mask_remaining, "duration"].sum()
-    formatted = _format_duration(total_duration)
+    remaining_duration = df.loc[mask_remaining, "duration"].sum()
+    formatted_remaining_duration = _format_duration(remaining_duration)
     header = ""
     # Section header
     section_title = df.loc[(df["section_num"] == section) & (df["Vid idx"] == -1), "title"].iloc[0]
@@ -81,9 +81,12 @@ def progress_in_a_section(section: int, show_section_num:bool=True) -> str:
         header = f"\n\033[1mSection :\033[0m {section}.{section_title}\n"
 
     if remaining_videos > 0:
-        header += (f"\033[1mStatus  :\033[0m {remaining_videos} videos remaining, {formatted} to finish the section")
+        header += (f"\033[1mStatus  :\033[0m {remaining_videos} videos remaining, {formatted_remaining_duration} to finish the section")
     else:
-        header +=  f"\033[1mStatus  :\033[0m \033[92mDone\033[0m"
+        total_duration = df.loc[mask_done, "duration"].sum() + remaining_duration
+        formatted_total_duration = _format_duration(total_duration)
+
+        header +=  f"\033[1mStatus  :\033[0m \033[92mDone ({total_videos} {"video" if total_videos==1 else "videos"} | Total Duration: {formatted_total_duration})\033[0m"
 
     # Progress bar
     if total_videos > 0:
@@ -213,7 +216,7 @@ def progress_report() -> str:
     report += f"\033[1m\033[94m{f.renderText('Progress Report')}\033[0m\n"
     report += f"\033[1m\033[93mCourse:\033[0m {progress_bar(done_videos_count, total_videos)}\n"
     report += f"\033[1m\033[93mTotal time done:\033[0m {_format_duration(done_time_sum)} out of {_format_duration(not_done_time_sum + done_time_sum)} watched ({_format_duration(not_done_time_sum)} remaining).\n"
-    report += f"\033[1m\033[93mTotal videos done:\033[0m {done_videos_count} out of {total_videos} finished ({done_videos_count} videos remaining).\n"
+    report += f"\033[1m\033[93mTotal videos done:\033[0m {done_videos_count} out of {total_videos} finished ({total_videos-done_videos_count} videos remaining).\n"
     for section in range(1, 15):
         report += progress_in_a_section(section) + "\n"
     return report
@@ -226,6 +229,7 @@ def strip_ansi_codes(text: str) -> str:
     """
     ansi_escape = re.compile(r'\x1B\[[0-?]*[ -/]*[@-~]')
     return ansi_escape.sub('', text)
+
 def progress_report_to_README() -> None:
     report = progress_report()
     clean_report = f"```\nProgress.course_prog_func.progress_report() github pre-hook \n{strip_ansi_codes(report)}```\n"
