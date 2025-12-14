@@ -23,48 +23,48 @@ Progress.course_prog_func.progress_report() github pre-hook
     \  \:\        \  \::/       \  \:\      \  \::/       \  \:\           \__\/
      \__\/         \__\/         \__\/       \__\/         \__\/                
 
-Course:  72%|███████████████████▎        256/358
-Total time done: 39h 4m out of 52h 15m watched (13h 11m remaining).
-Total videos done: 256 out of 358 finished (256 videos remaining).
+Course:  73%|███████████████████▊        263/358
+Total time done: 40h 1m out of 52h 15m watched (12h 14m remaining).
+Total videos done: 263 out of 358 finished (95 videos remaining).
 
 Section : 1.Introduction
-Status  : Done
+Status  : Done (7 videos | Total Duration: 22m)
 Progress: 100%|███████████████████████████████ 7/7
 
 Section : 2.PyTorch Fundamentals
-Status  : Done
+Status  : Done (32 videos | Total Duration: 4h 9m)
 Progress: 100%|█████████████████████████████ 32/32
 
 Section : 3.PyTorch Workflow
-Status  : Done
+Status  : Done (28 videos | Total Duration: 4h 17m)
 Progress: 100%|█████████████████████████████ 28/28
 
 Section : 4.PyTorch Neural Network Classification
-Status  : Done
+Status  : Done (32 videos | Total Duration: 5h 26m)
 Progress: 100%|█████████████████████████████ 32/32
 
 Section : 5.PyTorch Computer Vision
-Status  : Done
+Status  : Done (34 videos | Total Duration: 5h 42m)
 Progress: 100%|█████████████████████████████ 34/34
 
 Section : 6.PyTorch Custom Datasets
-Status  : Done
+Status  : Done (37 videos | Total Duration: 5h 51m)
 Progress: 100%|█████████████████████████████ 37/37
 
 Section : 7.PyTorch Going Modular
-Status  : Done
+Status  : Done (10 videos | Total Duration: 1h 33m)
 Progress: 100%|█████████████████████████████ 10/10
 
 Section : 8.PyTorch Transfer Learning
-Status  : Done
+Status  : Done (19 videos | Total Duration: 2h 44m)
 Progress: 100%|█████████████████████████████ 19/19
 
 Section : 9.PyTorch Experiment Tracking
-Status  : 16 videos remaining, 2h 19m to finish the section
-Progress:  27%|████████▏                      6/22
+Status  : 9 videos remaining, 1h 22m to finish the section
+Progress:  59%|█████████████████▏            13/22
 
 Section : 10.PyTorch Paper Replicating (Skipped for now)
-Status  : Done
+Status  : Done (50 videos | Total Duration: 8h 7m)
 Progress: 100%|█████████████████████████████ 50/50
 
 Section : 11.PyTorch Model Deployment
@@ -76,7 +76,7 @@ Status  : 25 videos remaining, 3h 3m to finish the section
 Progress:   0%|                               0/25
 
 Section : 13.Bonus Section
-Status  : Done
+Status  : Done (1 video | Total Duration: 1m)
 Progress: 100%|███████████████████████████████ 1/1
 
 Section : 14.Where To Go From Here?
