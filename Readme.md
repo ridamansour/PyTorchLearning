@@ -1,5 +1,5 @@
 ```
-Progress.course_prog_func.progress_report() github pre-hook 
+Progress.course_prog_func.progress_report() github pre-commit 
       ___         ___           ___           ___           ___           ___           ___           ___     
      /  /\       /  /\         /  /\         /  /\         /  /\         /  /\         /  /\         /  /\    
     /  /::\     /  /::\       /  /::\       /  /:/_       /  /::\       /  /:/_       /  /:/_       /  /:/_   
