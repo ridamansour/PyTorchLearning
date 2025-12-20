@@ -23,9 +23,9 @@ Progress.course_prog_func.progress_report() github pre-commit
     \  \:\        \  \::/       \  \:\      \  \::/       \  \:\           \__\/
      \__\/         \__\/         \__\/       \__\/         \__\/                
 
-Course:  62%|████████████████▋           222/358
-Total time done: 33h 16m out of 52h 15m watched (18h 59m remaining).
-Total videos done: 222 out of 358 finished (136 videos remaining).
+Course:  64%|█████████████████▎          230/358
+Total time done: 34h 9m out of 52h 15m watched (18h 6m remaining).
+Total videos done: 230 out of 358 finished (128 videos remaining).
 
 Section : 1.Introduction
 Status  : Done (7 videos | Total Duration: 22m)
@@ -64,8 +64,8 @@ Status  : Done (22 videos | Total Duration: 3h 11m)
 Progress: 100%|█████████████████████████████ 22/22
 
 Section : 10.PyTorch Paper Replicating
-Status  : 50 videos remaining, 8h 7m to finish the section
-Progress:   0%|                               0/50
+Status  : 42 videos remaining, 7h 14m to finish the section
+Progress:  16%|████▊                          8/50
 
 Section : 11.PyTorch Model Deployment
 Status  : 57 videos remaining, 7h 45m to finish the section
