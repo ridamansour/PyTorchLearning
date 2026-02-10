@@ -1,0 +1,2 @@
+img,Predictions,Prediction time (s),timestamp
+.gradio/flagged/img/f9ef53539ba45ffe7a25/3541033.jpg,"{""label"": ""steak"", ""confidences"": [{""label"": ""steak"", ""confidence"": 0.9468690156936646}, {""label"": ""pizza"", ""confidence"": 0.030933644622564316}, {""label"": ""sushi"", ""confidence"": 0.022016018629074097}]}",0.7576,2026-02-10 18:43:14.008163
