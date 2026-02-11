@@ -23,9 +23,9 @@ Progress.course_prog_func.progress_report() github pre-commit
     \  \:\        \  \::/       \  \:\      \  \::/       \  \:\           \__\/
      \__\/         \__\/         \__\/       \__\/         \__\/                
 
-Course:  92%|████████████████████████▊   329/358
-Total time done: 49h 8m out of 52h 15m watched (3h 7m remaining).
-Total videos done: 329 out of 358 finished (29 videos remaining).
+Course:  97%|██████████████████████████▏ 347/358
+Total time done: 51h 11m out of 52h 15m watched (1h 4m remaining).
+Total videos done: 347 out of 358 finished (11 videos remaining).
 
 Section : 1.Introduction
 Status  : Done (7 videos | Total Duration: 22m)
@@ -72,8 +72,8 @@ Status  : Done (57 videos | Total Duration: 7h 45m)
 Progress: 100%|█████████████████████████████ 57/57
 
 Section : 12.Introduction to PyTorch 2.0 and torch.compile
-Status  : 25 videos remaining, 3h 3m to finish the section
-Progress:   0%|                               0/25
+Status  : 7 videos remaining, 1h  to finish the section
+Progress:  72%|████████████████████▉         18/25
 
 Section : 13.Bonus Section
 Status  : Done (1 video | Total Duration: 1m)
