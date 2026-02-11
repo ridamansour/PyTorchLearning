@@ -6,7 +6,7 @@ from torch import nn
 def create_effnetb2_model(num_classes:int=3, # default output classes = 3 (pizza, steak, sushi)
                           seed:int=42):
     weights = torchvision.models.EfficientNet_B2_Weights.DEFAULT
-    model = torchvision.models.efficientnet_b2(weights=weights).to(device)
+    model = torchvision.models.efficientnet_b2(weights=weights)
     transforms = weights.transforms()
 
     for param in model.parameters():
